@@ -59,11 +59,13 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.4);
-  padding: 0 1em 0 0.5em;
+  padding: .25em 1em .25em 0.5em;
+  border-radius: 15px;
 }
 
 .party-pokeball {
   border-right: 2px solid rgb(180, 178, 178);
+  padding-right: .5em;
 }
 
 /* ---------------------------------- PARTY COMPONENT -------------------------------- */
@@ -73,7 +75,15 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.4);
-  padding: 0 1em 0 0.5em;
+  padding: .5em 1em .5em 0.5em;
+  border-radius: 5px;
+}
+
+.party-poke-level {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: .25em .5em;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .party-poke-image {
