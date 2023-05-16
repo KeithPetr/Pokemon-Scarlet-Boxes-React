@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(
+    270deg,
+    rgba(1, 255, 240, 1) 52%,
+    rgba(29, 214, 245, 1) 100%
+  );
+}
+
+/* --------------------------- HEADER -------------------------------- */
+
+.nav-bar-top {
+  display: flex;
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40%;
+  align-items: center;
+  padding: 0.45em 0;
+  margin: 0;
+  color: #a7a6a6;
+  font-size: 1.5rem;
+}
+
+.x-button {
+  border-radius: 50%;
+  background-color: white;
+  padding: 0.25em;
+  margin: 0 1em;
+  color: black;
+  font-size: 0.9rem;
+}
+
+.x-border-right {
+  border-right: 2px solid rgb(180, 178, 178); /* Add the desired border style */
+}
+
+.nav-party {
+  margin-left: .6em;
+}
+
+.nav-held,
+.nav-battle {
+  margin-left: 2em;
+}
