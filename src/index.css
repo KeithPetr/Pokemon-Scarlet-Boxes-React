@@ -11,12 +11,12 @@ body {
   );
 }
 
-/* --------------------------- HEADER -------------------------------- */
+/* ----------------------------------- HEADER ------------------------------------------- */
 
 .nav-bar-top {
   display: flex;
   list-style: none;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 40%;
   align-items: center;
   padding: 0.45em 0;
@@ -35,14 +35,56 @@ body {
 }
 
 .x-border-right {
-  border-right: 2px solid rgb(180, 178, 178); /* Add the desired border style */
+  border-right: 2px solid rgb(180, 178, 178);
 }
 
 .nav-party {
-  margin-left: .6em;
+  margin-left: 0.6em;
 }
 
 .nav-held,
 .nav-battle {
   margin-left: 2em;
+}
+
+/* ---------------------------------- PARTY --------------------------------------- */
+
+.party {
+  margin: 2em 0 0 1em;
+  width: 10%;
+  color: white;
+}
+
+.party-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: .25em 1em .25em 0.5em;
+  border-radius: 15px;
+}
+
+.party-pokeball {
+  border-right: 2px solid rgb(180, 178, 178);
+  padding-right: .5em;
+}
+
+/* ---------------------------------- PARTY COMPONENT -------------------------------- */
+
+.party-component {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: .5em 1em .5em 0.5em;
+  border-radius: 5px;
+}
+
+.party-poke-level {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: .25em .5em;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.party-poke-image {
 }
