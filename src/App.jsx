@@ -12,9 +12,6 @@ export default function App() {
     <div>
       <Header/>
       <Party/>
-      <Boxes/>
-      <Stats/>
-      <Footer/>
     </div>
   )
 }
