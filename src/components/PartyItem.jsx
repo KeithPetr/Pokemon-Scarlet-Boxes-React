@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PartyComponent() {
+export default function PartyItem() {
   return (
     <div className="party-component">
       <div className="party-details">

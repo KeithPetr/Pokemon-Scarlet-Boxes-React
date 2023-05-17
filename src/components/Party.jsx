@@ -1,5 +1,5 @@
 import React from "react"
-import PartyComponent from "./PartyComponent"
+import PartyItem from "./PartyItem"
 
 export default function Party() {
     return (
@@ -8,12 +8,12 @@ export default function Party() {
                 <div className="party-pokeball">O</div>
                 <div className="party-current-title">Current Party</div>
             </div>
-            <PartyComponent />
-            <PartyComponent />
-            <PartyComponent />
-            <PartyComponent />
-            <PartyComponent />
-            <PartyComponent />
+            <PartyItem />
+            <PartyItem />
+            <PartyItem />
+            <PartyItem />
+            <PartyItem />
+            <PartyItem />
         </section>
     )
 }

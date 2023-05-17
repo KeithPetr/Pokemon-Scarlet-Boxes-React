@@ -12,6 +12,7 @@ export default function App() {
     <div>
       <Header/>
       <Party/>
+      <Boxes />
     </div>
   )
 }
