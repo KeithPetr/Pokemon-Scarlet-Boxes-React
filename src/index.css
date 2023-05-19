@@ -101,9 +101,11 @@ body {
   margin-top: 1em;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--bg-four);
-  padding: 0.5em 1em 0.5em 0.5em;
   border-radius: 5px;
+  width: 100%;
+  border: 3px solid brown;
 }
 
 .party-poke-level {
@@ -113,11 +115,17 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.party-poke-image {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  padding: 1em .5em 0
+}
+
 /* ----------------------------------- BOXES COMPONENT ------------------------------ */
 
 .boxes {
-  border: 1px solid brown;
-  width: 70%;
   margin: 0 auto;
 }
 
@@ -132,7 +140,6 @@ body {
   grid-template-columns: repeat(6, 80px);
   grid-template-rows: repeat(5, 80px);
   justify-content: center;
-  gap: 0.5em;
 }
 
 .box-info {
@@ -153,6 +160,15 @@ body {
 
 .box-item {
   background-color: var(--bg-four);
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  padding: 1em .5em 0
+}
+
+.box-item-image {
+  width: 70%;
 }
 
 /* ----------------------------- SEARCH INPUTS --------------------------------- */
