@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function BoxItem() {
+export default function PokemonData() {
   const [pokemonData, setPokemonData] = useState([]);
-  const randNum = Math.ceil(Math.random() * 5);
+  const randNum = Math.ceil(Math.random() * 100);
+  console.log(randNum);
 
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${randNum}`)
       .then((res) => res.json())
       .then((data) => {
         setPokemonData(data);
-        console.log(data.sprites.other);
+        console.log(data);
       });
   }, []);
 
-  return (
-    <div className="box-item"></div>
-  );
+  console.log(pokemonData);
+
+  return { pokemonData };
 }
+
