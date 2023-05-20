@@ -4,6 +4,7 @@ import SearchInputs from "./components/SearchInputs";
 import Header from "./components/Header";
 import Party from "./components/Party";
 import Stats from "./components/Stats";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [pokemonData, setPokemonData] = useState([]);
@@ -40,19 +41,22 @@ export default function App() {
 
   return (
     <div className="app-layout">
-      <div className="pokemon-side">
-        <Header />
-        <div className="pokemon-items">
-          <Party />
-          <div className="pokemon-grid">
-            <Boxes data={pokemonData} />
-            <SearchInputs />
+      <div className="app-row">
+        <div className="pokemon-side">
+          <Header />
+          <div className="pokemon-items">
+            <Party />
+            <div className="pokemon-grid">
+              <Boxes data={pokemonData} />
+              <SearchInputs />
+            </div>
           </div>
         </div>
+        <div className="stats-side">
+          <Stats />
+        </div>
       </div>
-      <div className="stats-side">
-        <Stats />
-      </div>
+      <Footer />
     </div>
   );
 }

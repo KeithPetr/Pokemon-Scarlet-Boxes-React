@@ -21,7 +21,12 @@ body {
 
 .app-layout {
   display: flex;
+  flex-direction: column;
   border: 1px solid red;
+}
+
+.app-row {
+  display: flex;
 }
 
 .pokemon-side {
@@ -108,7 +113,7 @@ body {
   border: 3px solid brown;
 }
 
-.party-poke-level {
+.poke-level {
   border: 1px solid black;
   border-radius: 15px;
   padding: 0.25em 0.5em;
@@ -189,4 +194,14 @@ body {
 .search {
   display: flex;
   background-color: var(--bg-four);
+}
+
+/* -------------------------------- STATS COMPONENT -------------------------------- */
+
+.stats {
+  color: white;
+}
+
+.ultra-ball {
+  width: 50px;
 }
