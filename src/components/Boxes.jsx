@@ -1,13 +1,18 @@
 import React from "react";
 import BoxItem from "./BoxItem";
 
-export default function Boxes() {
+export default function Boxes({ data }) {
+  // const image = data?.sprites?.other?.["official-artwork"]?.front_default;
+
   function createBoxItems() {
-    const boxItems = [];
-    for (let i = 0; i < 30; i++) {
-      boxItems.push(<BoxItem key={i} />);
-    }
-    return boxItems;
+    return data.slice(0, 30).map((pokemon) => {
+      return (
+        <BoxItem
+          key={pokemon.id}
+          image={pokemon.sprites.other["official-artwork"].front_default}
+        />
+      );
+    });
   }
 
   return (
@@ -20,9 +25,7 @@ export default function Boxes() {
         </div>
         <div className="right-trigger">R</div>
       </div>
-      <div className="box-grid">
-        {createBoxItems()}
-      </div>
+      <div className="box-grid">{createBoxItems()}</div>
     </section>
   );
 }
