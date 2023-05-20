@@ -2,8 +2,6 @@ import React from "react";
 import BoxItem from "./BoxItem";
 
 export default function Boxes({ data }) {
-  // const image = data?.sprites?.other?.["official-artwork"]?.front_default;
-
   function createBoxItems() {
     return data.slice(0, 30).map((pokemon) => {
       return (
