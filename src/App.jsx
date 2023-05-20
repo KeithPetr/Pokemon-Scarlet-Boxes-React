@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Boxes from "./components/Boxes";
 import SearchInputs from "./components/SearchInputs";
 import Header from "./components/Header";
@@ -6,7 +6,37 @@ import Party from "./components/Party";
 import Stats from "./components/Stats";
 
 export default function App() {
-  const [count, setCount] = useState(0);
+  const [pokemonData, setPokemonData] = useState([]);
+
+  useEffect(() => {
+    const fetchPokemonData = async () => {
+      const uniqueNumbers = new Set();
+      const requests = [];
+
+      while (uniqueNumbers.size < 30) {
+        const randNum = Math.ceil(Math.random() * 500);
+
+        if (!uniqueNumbers.has(randNum)) {
+          uniqueNumbers.add(randNum);
+          requests.push(
+            fetch(`https://pokeapi.co/api/v2/pokemon/${randNum}`).then((res) =>
+              res.json()
+            )
+          );
+        }
+      }
+
+      try {
+        const responseData = await Promise.all(requests);
+        setPokemonData(responseData);
+        console.log(responseData);
+      } catch (error) {
+        console.log("Error occurred while fetching Pokemon data:", error);
+      }
+    };
+
+    fetchPokemonData();
+  }, []);
 
   return (
     <div className="app-layout">
@@ -15,7 +45,7 @@ export default function App() {
         <div className="pokemon-items">
           <Party />
           <div className="pokemon-grid">
-            <Boxes />
+            <Boxes data={pokemonData} />
             <SearchInputs />
           </div>
         </div>
