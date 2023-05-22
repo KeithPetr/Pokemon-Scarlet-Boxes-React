@@ -21,7 +21,12 @@ body {
 
 .app-layout {
   display: flex;
+  flex-direction: column;
   border: 1px solid red;
+}
+
+.app-row {
+  display: flex;
 }
 
 .pokemon-side {
@@ -98,17 +103,16 @@ body {
 /* ---------------------------------- PARTY ITEM -------------------------------- */
 
 .party-component {
-  margin-top: 1em;
+  margin-top: 0.25em;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg-four);
   border-radius: 5px;
   width: 100%;
-  border: 3px solid brown;
 }
 
-.party-poke-level {
+.poke-level {
   border: 1px solid black;
   border-radius: 15px;
   padding: 0.25em 0.5em;
@@ -120,7 +124,7 @@ body {
   height: 75px;
   display: flex;
   justify-content: center;
-  padding: 1em .5em 0
+  padding: 1em 0.5em 0;
 }
 
 /* ----------------------------------- BOXES COMPONENT ------------------------------ */
@@ -164,7 +168,7 @@ body {
   height: 75px;
   display: flex;
   justify-content: center;
-  padding: 1em .5em 0
+  padding: 1em 0.5em 0;
 }
 
 .box-item-image {
@@ -189,4 +193,154 @@ body {
 .search {
   display: flex;
   background-color: var(--bg-four);
+}
+
+/* -------------------------------- STATS COMPONENT -------------------------------- */
+
+.stats-side {
+  color: white;
+  width: 40%;
+  background-color: var(--bg-four);
+}
+
+.stats-header {
+  background-color: yellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ultra-ball {
+  width: 30px;
+  height: 30px;
+  margin: auto 0.5em auto 1.5em;
+}
+
+.ball-h2 {
+  display: flex;
+  color: black;
+}
+
+.level-gender {
+  display: flex;
+}
+
+.gender-icon {
+  width: 25px;
+  margin: 0 1.5em 0 0.5em;
+}
+
+.poke-number {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.index-number {
+  margin: 0 1em;
+}
+
+.revive {
+  width: 30px;
+  height: 30px;
+  margin-right: 1em;
+  margin-left: auto;
+}
+
+.type-header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5em 1em;
+}
+
+.type {
+  display: flex;
+  padding: 0.25em 1em 0.25em 0.5em;
+  border-radius: 15px;
+  background-color: red;
+  font-size: 1.25rem;
+}
+
+.type-icon {
+  width: 20px;
+  margin-right: 0.5em;
+}
+
+.base-stats {
+  padding: 0.5em 0;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  font-size: 1.25rem;
+}
+
+.hp,
+.attack-stats,
+.defense-stats,
+.speed {
+  display: flex;
+  justify-content: space-between;
+}
+
+.special-attack,
+.special-defense {
+  flex-direction: column;
+  margin-left: 5em;
+}
+
+.attack,
+.defense {
+  margin-right: 5em;
+}
+
+.hp,
+.speed {
+  justify-content: center;
+}
+
+.ability, .held-item {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: .25em 0;
+  font-size: 1.25rem;
+}
+
+.ability-title, .held-item-title {
+  margin: 0 0.5em 0 0.5em;
+  border-right: 1px solid grey;
+  width: 100px;
+}
+
+.ability-name {
+}
+
+.held-item{
+  background-color: transparent;
+}
+
+.move-list {
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 1.5rem;
+  padding: .25em 0 .25em .5em;
+}
+
+.move {
+  display: flex;
+}
+
+.move-icon {
+  width: 15px;
+}
+
+.all-shapes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  margin-bottom: 0;
+}
+
+.shape {
+  width: 25px;
 }

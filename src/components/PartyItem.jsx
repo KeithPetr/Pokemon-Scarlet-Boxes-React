@@ -6,7 +6,7 @@ const imgURL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites
   return (
     <div className="party-component">
       <div className="party-details">
-        <div className="party-poke-level">Lv. 100</div>
+        <div className="poke-level">Lv. 100</div>
         <div className="party-poke-name">Dragonite</div>
       </div>
       <img className="party-poke-image" src={imgURL}/>
