@@ -2,6 +2,7 @@ import React from "react";
 import UltraBall from "../PokemonIcons/ultra-ball.png";
 import Male from "../PokemonIcons/male.png";
 import Revive from "../PokemonIcons/revive.png"
+import Fire from "../PokemonIcons/fire.svg"
 
 export default function Stats() {
   return (
@@ -21,7 +22,20 @@ export default function Stats() {
         <h3>Charmander</h3>
         <img className="revive" src={Revive} />
       </div>
-      <div></div>
+      <div className="type-header">
+        <div className="type">
+            <img className="type-icon" src={Fire}/>
+            <div className="type-name">Fire</div>
+        </div>
+        <div className="type">
+            <img className="type-icon"/>
+            <div className="type-name">Psychic</div>
+        </div>
+        <div className="type">
+            <img className="type-icon"/>
+            <div className="type-name">Ghost</div>
+        </div>
+      </div>
       <div></div>
       <div></div>
       <div></div>
