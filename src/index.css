@@ -125,7 +125,7 @@ body {
   height: 75px;
   display: flex;
   justify-content: center;
-  padding: 1em .5em 0
+  padding: 1em 0.5em 0;
 }
 
 /* ----------------------------------- BOXES COMPONENT ------------------------------ */
@@ -169,7 +169,7 @@ body {
   height: 75px;
   display: flex;
   justify-content: center;
-  padding: 1em .5em 0
+  padding: 1em 0.5em 0;
 }
 
 .box-item-image {
@@ -198,10 +198,52 @@ body {
 
 /* -------------------------------- STATS COMPONENT -------------------------------- */
 
-.stats {
+.stats-side {
   color: white;
+  width: 40%;
+  background-color: var(--bg-four);
+}
+
+.stats-header {
+  background-color: yellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .ultra-ball {
-  width: 50px;
+  width: 30px;
+  height: 30px;
+  margin: auto 0.5em auto 1.5em;
+}
+
+.ball-h2 {
+  display: flex;
+  color: black;
+}
+
+.level-gender {
+  display: flex;
+}
+
+.gender-icon {
+  width: 25px;
+  margin: 0 1.5em 0 0.5em;
+}
+
+.poke-number {
+  display: flex;
+  align-items: center;
+  border: 2px solid orange;
+}
+
+.index-number {
+  margin: 0 1em;
+}
+
+.revive {
+  width: 30px;
+  height: 30px;
+  margin-right: 1em;
+  margin-left: auto;
 }
