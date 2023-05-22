@@ -5,6 +5,12 @@ import Revive from "../PokemonIcons/revive.png";
 import Fire from "../PokemonIcons/fire.svg";
 import Psychic from "../PokemonIcons/psychic.svg";
 import Ghost from "../PokemonIcons/ghost.svg";
+import Circle from "../ShapeIcons/circle.png"
+import Heart from "../ShapeIcons/heart.png"
+import Kite from "../ShapeIcons/kite.png"
+import Square from "../ShapeIcons/square.png"
+import Star from "../ShapeIcons/star.png"
+import Triangle from "../ShapeIcons/triangle.png"
 
 export default function Stats() {
   return (
@@ -92,7 +98,14 @@ export default function Stats() {
             <div className="move-name">Flamethrower</div>
         </div>
       </div>
-      <div></div>
+      <div className="all-shapes">
+        <img className="shape" src={Circle}/>
+        <img className="shape" src={Triangle}/>
+        <img className="shape" src={Square}/>
+        <img className="shape" src={Heart}/>
+        <img className="shape" src={Star}/>
+        <img className="shape" src={Kite}/>
+      </div>
     </div>
   );
 }

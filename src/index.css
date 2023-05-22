@@ -233,6 +233,7 @@ body {
 .poke-number {
   display: flex;
   align-items: center;
+  font-size: 1.25rem;
 }
 
 .index-number {
@@ -258,6 +259,7 @@ body {
   padding: 0.25em 1em 0.25em 0.5em;
   border-radius: 15px;
   background-color: red;
+  font-size: 1.25rem;
 }
 
 .type-icon {
@@ -270,6 +272,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 200px;
+  font-size: 1.25rem;
 }
 
 .hp,
@@ -300,6 +303,7 @@ body {
   display: flex;
   background-color: rgba(0, 0, 0, 0.3);
   padding: .25em 0;
+  font-size: 1.25rem;
 }
 
 .ability-title, .held-item-title {
@@ -317,6 +321,8 @@ body {
 
 .move-list {
   background-color: rgba(0, 0, 0, 0.3);
+  font-size: 1.5rem;
+  padding: .25em 0 .25em .5em;
 }
 
 .move {
@@ -325,4 +331,16 @@ body {
 
 .move-icon {
   width: 15px;
+}
+
+.all-shapes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  margin-bottom: 0;
+}
+
+.shape {
+  width: 25px;
 }
