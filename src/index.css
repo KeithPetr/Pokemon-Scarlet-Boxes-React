@@ -21,7 +21,7 @@ body {
 
 .app-layout {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column; 
 }
 
 .app-row {
@@ -198,7 +198,7 @@ body {
 .search-inputs {
   display: flex;
   width: 70%;
-  margin: 3em auto 0;
+  margin: 2em auto 1em;
   justify-content: space-between;
   color: white;
 }
@@ -265,7 +265,6 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .stats-header {
@@ -273,6 +272,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 10%;
 }
 
 .ultra-ball {
@@ -299,6 +299,7 @@ body {
   display: flex;
   align-items: center;
   font-size: 1.25rem;
+  height: 8%;
 }
 
 .poke-number h3 {
@@ -338,11 +339,11 @@ body {
 }
 
 .base-stats {
-  padding: 3em 0;
   display: flex;
   flex-direction: column;
   font-size: 1.25rem;
   justify-content: center;
+  height: 40%;
 }
 
 .hp,
@@ -382,9 +383,6 @@ body {
   width: 100px;
 }
 
-.ability-name {
-}
-
 .held-item{
   background-color: transparent;
 }
@@ -408,7 +406,8 @@ body {
   justify-content: center;
   align-items: center;
   background-color: orange;
-  padding: 0.5em 0;
+  padding: 0.25em 0;
+  background-color: transparent;
 }
 
 .shape {
@@ -421,14 +420,27 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .footer-options {
+  width: 50%;
   display: flex;
+  justify-content: space-evenly;
 }
 
 .footer-options div {
   display: flex;
   align-items: center;
+}
+
+.footer-options p {
+  background-color: white;
+  border-radius: 50%;
+  padding: .25em;
+  margin-right: .5em;
+}
+
+.footer-options div div {
+  color: white;
 }
