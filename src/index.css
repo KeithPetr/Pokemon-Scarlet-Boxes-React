@@ -21,8 +21,7 @@ body {
 
 .app-layout {
   display: flex;
-  flex-direction: column;
-  border: 1px solid red;
+  flex-direction: column;  
 }
 
 .app-row {
@@ -32,13 +31,11 @@ body {
 .pokemon-side {
   display: flex;
   flex-direction: column;
-  border: 1px solid purple;
-  width: 68%;
+  width: 100%;
 }
 
 .pokemon-items {
   display: flex;
-  border: 1px solid orange;
 }
 
 /* ----------------------------------- HEADER ------------------------------------------- */
@@ -53,7 +50,6 @@ body {
   margin: 0;
   color: #a7a6a6;
   font-size: 1.5rem;
-  border: 1px solid yellow;
 }
 
 .x-button {
@@ -84,7 +80,6 @@ body {
   margin: 2em 0 0 1em;
   width: 20%;
   color: white;
-  border: 1px solid salmon;
 }
 
 .party-header {
@@ -113,7 +108,7 @@ body {
 }
 
 .poke-level {
-  border: 1px solid black;
+  
   border-radius: 15px;
   padding: 0.25em 0.5em;
   background-color: rgba(0, 0, 0, 0.5);
@@ -135,8 +130,15 @@ body {
 
 .boxes-header {
   display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 1em;
+  justify-content: center;
+  margin-bottom: 1em;  
+}
+
+.left-trigger, .right-trigger {
+  border: 2px solid black;
+  padding: 0.5em 1em;
+  background-color: lightgray;
+  font-size: 1.25rem;
 }
 
 .box-grid {
@@ -149,10 +151,26 @@ body {
 .box-info {
   display: flex;
   background-color: var(--bg-four);
+  width: 40%;
+  margin: 0 1em;
+  padding: .5em 0;
 }
 
-.box-icon {
+.cube-icon {
   margin-right: 1em;
+  padding: 0 1em;
+  border-right: 2px solid rgb(180, 178, 178);
+}
+
+.cube-icon > img {
+  width: 30px;
+}
+
+.box-number {
+  font-size: 1.25rem;
+  display: flex;
+  margin: auto;
+  align-items: center;
 }
 
 .pokemon-grid {
@@ -178,29 +196,76 @@ body {
 /* ----------------------------- SEARCH INPUTS --------------------------------- */
 
 .search-inputs {
-  border: 1px solid maroon;
   display: flex;
   width: 70%;
   margin: 3em auto 0;
   justify-content: space-between;
+  color: white;
+}
+
+.all-boxes, .search {
+  padding: .25em 0;
 }
 
 .all-boxes {
   display: flex;
   background-color: var(--bg-four);
+  width: 40%;
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+.boxes-icon {
+  display: flex;
+  border-right: 2px solid grey;
+  padding: .25em 1em;
+}
+
+.boxes-icon > img {
+  width: 30px;
+  align-self: center;
+}
+
+.all-boxes > p {
+  margin: auto;
 }
 
 .search {
   display: flex;
   background-color: var(--bg-four);
+  width: 40%;
+  font-size: 1.5rem;
+}
+
+.magnifying-glass {
+  display: flex;
+  border-right: 2px solid grey;
+  padding: .25em 1em;
+}
+
+.magnifying-glass > img {
+  width: 30px;
+  align-self: center;
+}
+
+.search > p {
+  margin: auto;
 }
 
 /* -------------------------------- STATS COMPONENT -------------------------------- */
 
 .stats-side {
+  width: 50%;
+}
+
+.stats {
   color: white;
-  width: 40%;
+  width: 100%;
   background-color: var(--bg-four);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .stats-header {
@@ -236,6 +301,11 @@ body {
   font-size: 1.25rem;
 }
 
+.poke-number h3 {
+  margin: 0;
+  padding: .5em 0;
+}
+
 .index-number {
   margin: 0 1em;
 }
@@ -268,11 +338,11 @@ body {
 }
 
 .base-stats {
-  padding: 0.5em 0;
+  padding: 3em 0;
   display: flex;
   flex-direction: column;
-  height: 200px;
   font-size: 1.25rem;
+  justify-content: center;
 }
 
 .hp,
@@ -338,9 +408,27 @@ body {
   justify-content: center;
   align-items: center;
   background-color: orange;
-  margin-bottom: 0;
+  padding: 0.5em 0;
 }
 
 .shape {
   width: 25px;
+}
+
+/* -------------------------------- FOOTER --------------------------------------- */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: ;
+}
+
+.footer-options {
+  display: flex;
+}
+
+.footer-options div {
+  display: flex;
+  align-items: center;
 }
