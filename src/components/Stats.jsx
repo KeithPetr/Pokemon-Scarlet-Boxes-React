@@ -26,6 +26,19 @@ export default function Stats() {
     );
   }
 
+  function typeTwo() {
+    if (selectedPokemon.types.length > 1) {
+      return (
+        <div className="type">
+          <img className="type-icon" src={Psychic} />
+          <div className="type-name">{selectedPokemon.types[1].type.name}</div>
+        </div>
+      );
+    } else {
+      return null;
+    }
+  }
+
   return (
     <div className="stats">
       <div className="stats-header">
@@ -39,19 +52,16 @@ export default function Stats() {
         </div>
       </div>
       <div className="poke-number">
-        <div className="index-number">No. 166</div>
-        <h3>Charmander</h3>
+        <div className="index-number">No. {selectedPokemon.id}</div>
+        <h3>{selectedPokemon.species.name}</h3>
         <img className="revive" src={Revive} />
       </div>
       <div className="type-header">
         <div className="type">
           <img className="type-icon" src={Fire} />
-          <div className="type-name">Fire</div>
+          <div className="type-name">{selectedPokemon.types[0].type.name}</div>
         </div>
-        <div className="type">
-          <img className="type-icon" src={Psychic} />
-          <div className="type-name">Psychic</div>
-        </div>
+        {typeTwo()}
         <div className="type">
           <img className="type-icon" src={Ghost} />
           <div className="type-name">Ghost</div>
@@ -59,35 +69,40 @@ export default function Stats() {
       </div>
       <div className="base-stats">
         <div className="hp">
-          <div>HP 100/100</div>
+          <div>
+            HP {selectedPokemon.stats[0].base_stat}/
+            {selectedPokemon.stats[0].base_stat}
+          </div>
         </div>
         <div className="attack-stats">
           <div className="special-attack">
             <div>Sp. Attack</div>
-            <div>100</div>
+            <div>{selectedPokemon.stats[3].base_stat}</div>
           </div>
           <div className="attack">
             <div>Attack</div>
-            <div>100</div>
+            <div>{selectedPokemon.stats[1].base_stat}</div>
           </div>
         </div>
         <div className="defense-stats">
           <div className="special-defense">
             <div>Sp. Defense</div>
-            <div>100</div>
+            <div>{selectedPokemon.stats[4].base_stat}</div>
           </div>
           <div className="defense">
             <div>Defense</div>
-            <div>100</div>
+            <div>{selectedPokemon.stats[2].base_stat}</div>
           </div>
         </div>
         <div className="speed">
-          <div>Speed 100</div>
+          <div>Speed {selectedPokemon.stats[5].base_stat}</div>
         </div>
       </div>
       <div className="ability">
         <div className="ability-title">Ability</div>
-        <div className="ability-name">Weak Armor</div>
+        <div className="ability-name">
+          {selectedPokemon.abilities[0].ability.name}
+        </div>
       </div>
       <div className="held-item">
         <div className="held-item-title">Held Item</div>
@@ -96,19 +111,19 @@ export default function Stats() {
       <div className="move-list">
         <div className="move">
           <img className="move-icon" src={Fire} />
-          <div className="move-name">Flamethrower</div>
+          <div className="move-name">{selectedPokemon.moves[0].move.name}</div>
         </div>
         <div className="move">
           <img className="move-icon" src={Fire} />
-          <div className="move-name">Flamethrower</div>
+          <div className="move-name">{selectedPokemon.moves[1].move.name}</div>
         </div>
         <div className="move">
           <img className="move-icon" src={Fire} />
-          <div className="move-name">Flamethrower</div>
+          <div className="move-name">{selectedPokemon.moves[2].move.name}</div>
         </div>
         <div className="move">
           <img className="move-icon" src={Fire} />
-          <div className="move-name">Flamethrower</div>
+          <div className="move-name">{selectedPokemon.moves[3].move.name}</div>
         </div>
       </div>
       <div className="all-shapes">
