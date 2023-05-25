@@ -332,6 +332,9 @@ body {
   border-radius: 15px;
   background-color: red;
   font-size: 1.25rem;
+  text-shadow: -1px 1px 10px black;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 .type-icon {
