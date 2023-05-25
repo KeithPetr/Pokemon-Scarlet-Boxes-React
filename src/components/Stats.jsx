@@ -1,24 +1,37 @@
-import React from "react";
+import React, { useContext } from "react";
 import UltraBall from "../PokemonIcons/ultra-ball.png";
 import Male from "../PokemonIcons/male.png";
 import Revive from "../PokemonIcons/revive.png";
 import Fire from "../PokemonIcons/fire.svg";
 import Psychic from "../PokemonIcons/psychic.svg";
 import Ghost from "../PokemonIcons/ghost.svg";
-import Circle from "../ShapeIcons/circle.png"
-import Heart from "../ShapeIcons/heart.png"
-import Kite from "../ShapeIcons/kite.png"
-import Square from "../ShapeIcons/square.png"
-import Star from "../ShapeIcons/star.png"
-import Triangle from "../ShapeIcons/triangle.png"
+import Circle from "../ShapeIcons/circle.png";
+import Heart from "../ShapeIcons/heart.png";
+import Kite from "../ShapeIcons/kite.png";
+import Square from "../ShapeIcons/square.png";
+import Star from "../ShapeIcons/star.png";
+import Triangle from "../ShapeIcons/triangle.png";
+import PokemonContext from "../PokemonContext";
 
 export default function Stats() {
+  const { selectedPokemon } = useContext(PokemonContext);
+  console.log(selectedPokemon);
+
+  if (!selectedPokemon) {
+    // Render blank elements or a loading indicator
+    return (
+      <div className="stats">
+        <h1>Blank</h1>
+      </div>
+    );
+  }
+
   return (
     <div className="stats">
       <div className="stats-header">
         <div className="ball-h2">
           <img className="ultra-ball" src={UltraBall} />
-          <h2 className="stats-h2">Charmander</h2>
+          <h2 className="stats-h2">{selectedPokemon.species.name}</h2>
         </div>
         <div className="level-gender">
           <div className="poke-level">Lv. 100</div>
@@ -82,29 +95,29 @@ export default function Stats() {
       </div>
       <div className="move-list">
         <div className="move">
-            <img className="move-icon" src={Fire}/>
-            <div className="move-name">Flamethrower</div>
+          <img className="move-icon" src={Fire} />
+          <div className="move-name">Flamethrower</div>
         </div>
         <div className="move">
-            <img className="move-icon" src={Fire}/>
-            <div className="move-name">Flamethrower</div>
+          <img className="move-icon" src={Fire} />
+          <div className="move-name">Flamethrower</div>
         </div>
         <div className="move">
-            <img className="move-icon" src={Fire}/>
-            <div className="move-name">Flamethrower</div>
+          <img className="move-icon" src={Fire} />
+          <div className="move-name">Flamethrower</div>
         </div>
         <div className="move">
-            <img className="move-icon" src={Fire}/>
-            <div className="move-name">Flamethrower</div>
+          <img className="move-icon" src={Fire} />
+          <div className="move-name">Flamethrower</div>
         </div>
       </div>
       <div className="all-shapes">
-        <img className="shape" src={Circle}/>
-        <img className="shape" src={Triangle}/>
-        <img className="shape" src={Square}/>
-        <img className="shape" src={Heart}/>
-        <img className="shape" src={Star}/>
-        <img className="shape" src={Kite}/>
+        <img className="shape" src={Circle} />
+        <img className="shape" src={Triangle} />
+        <img className="shape" src={Square} />
+        <img className="shape" src={Heart} />
+        <img className="shape" src={Star} />
+        <img className="shape" src={Kite} />
       </div>
     </div>
   );

@@ -5,58 +5,30 @@ import Header from "./components/Header";
 import Party from "./components/Party";
 import Stats from "./components/Stats";
 import Footer from "./components/Footer";
+import { PokemonProvider } from "./PokemonContext";
 
 export default function App() {
-  const [pokemonData, setPokemonData] = useState([]);
-
-  useEffect(() => {
-    const fetchPokemonData = async () => {
-      const uniqueNumbers = new Set();
-      const requests = [];
-
-      while (uniqueNumbers.size < 30) {
-        const randNum = Math.ceil(Math.random() * 500);
-
-        if (!uniqueNumbers.has(randNum)) {
-          uniqueNumbers.add(randNum);
-          requests.push(
-            fetch(`https://pokeapi.co/api/v2/pokemon/${randNum}`).then((res) =>
-              res.json()
-            )
-          );
-        }
-      }
-
-      try {
-        const responseData = await Promise.all(requests);
-        setPokemonData(responseData);
-        console.log(responseData);
-      } catch (error) {
-        console.log("Error occurred while fetching Pokemon data:", error);
-      }
-    };
-
-    fetchPokemonData();
-  }, []);
 
   return (
-    <div className="app-layout">
-      <div className="app-row">
-        <div className="pokemon-side">
-          <Header />
-          <div className="pokemon-items">
-            <Party />
-            <div className="pokemon-grid">
-              <Boxes data={pokemonData} />
-              <SearchInputs />
+    <PokemonProvider>
+      <div className="app-layout">
+        <div className="app-row">
+          <div className="pokemon-side">
+            <Header />
+            <div className="pokemon-items">
+              <Party />
+              <div className="pokemon-grid">
+                <Boxes />
+                <SearchInputs />
+              </div>
             </div>
           </div>
+          <div className="stats-side">
+            <Stats />
+          </div>
         </div>
-        <div className="stats-side">
-          <Stats />
-        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </PokemonProvider>
   );
 }

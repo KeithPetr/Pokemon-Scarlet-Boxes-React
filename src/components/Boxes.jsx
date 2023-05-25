@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import BoxItem from "./BoxItem";
 import Cube from "../ShapeIcons/cube.png";
+import PokemonContext from "../PokemonContext";
 
-export default function Boxes({ data }) {
+export default function Boxes() {
+  const { pokemonData, handleBoxItemClick } = useContext(PokemonContext);
+
   function createBoxItems() {
-    return data.slice(0, 30).map((pokemon) => {
+    return pokemonData.map((pokemon) => {
       return (
         <BoxItem
           key={pokemon.id}
           image={pokemon.sprites.other["official-artwork"].front_default}
+          handleBoxItemClick={handleBoxItemClick}
+          pokemon={pokemon}
         />
       );
     });
