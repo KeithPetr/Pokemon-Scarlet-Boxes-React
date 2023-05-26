@@ -175,7 +175,9 @@ export default function Stats() {
         <h3>{selectedPokemon.species.name}</h3>
         <img className="revive" src={Revive} />
       </div>
-      <div className="type-header">{renderTypes()}</div>
+      <div className="type-header">
+        {renderTypes()}
+      </div>
       <div className="base-stats">
         <div className="hp">
           <div>

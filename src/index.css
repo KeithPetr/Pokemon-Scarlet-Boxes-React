@@ -328,7 +328,8 @@ body {
 
 .type {
   display: flex;
-  padding: 0.25em 1em 0.25em 0.5em;
+  width: 35%;
+  padding: 0.25em 1em;
   border-radius: 15px;
   background-color: red;
   font-size: 1.25rem;
@@ -340,6 +341,10 @@ body {
 .type-icon {
   width: 20px;
   margin-right: 0.5em;
+}
+
+.type-name {
+  margin: 0 auto;
 }
 
 .base-stats {
