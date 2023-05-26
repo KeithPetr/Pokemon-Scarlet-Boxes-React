@@ -17,9 +17,6 @@ export default function MovesList() {
             throw new Error("Network response was not ok");
           }
           const data = await response.json();
-          // Handle the fetched move data here
-
-          console.log(data);
           return data;
         });
 
@@ -39,5 +36,30 @@ export default function MovesList() {
     console.log(moveArray);
   }, [moveArray]);
 
-  return null; // Placeholder return statement, adjust as needed
+  return (
+    <div className="move-list">
+      {moveArray.length > 0 ? (
+        <>
+          <div className="move">
+            <img className="move-icon" />
+            <div className="move-name">{moveArray[0].name}</div>
+          </div>
+          <div className="move">
+            <img className="move-icon" />
+            <div className="move-name">{moveArray[1].name}</div>
+          </div>
+          <div className="move">
+            <img className="move-icon" />
+            <div className="move-name">{moveArray[2].name}</div>
+          </div>
+          <div className="move">
+            <img className="move-icon" />
+            <div className="move-name">{moveArray[3].name}</div>
+          </div>
+        </>
+      ) : (
+        <h3>Loading moves...</h3>
+      )}
+    </div>
+  );
 }
