@@ -7,9 +7,12 @@ export default PokemonContext;
 export function PokemonProvider({ children }) {
   const [pokemonData, setPokemonData] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState(null);
+  const [selectedMove, setSelectedMove] = useState(null);
 
   function handleBoxItemClick(pokemonObj) {
     setSelectedPokemon(pokemonObj);
+    setSelectedMove(pokemonObj.moves[0].move.name)
+    // console.log(`-----SELECTED MOVE----- ${selectedMove}`)
   }
 
   useEffect(() => {
@@ -43,7 +46,7 @@ export function PokemonProvider({ children }) {
   }, []);
 
   return (
-    <PokemonContext.Provider value={{pokemonData, selectedPokemon, handleBoxItemClick}}>
+    <PokemonContext.Provider value={{pokemonData, selectedPokemon, selectedMove, handleBoxItemClick}}>
       {children}
     </PokemonContext.Provider>
   );
