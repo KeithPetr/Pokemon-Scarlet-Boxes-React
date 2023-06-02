@@ -404,10 +404,14 @@ body {
 
 .move {
   display: flex;
+  margin-bottom: .5em;
 }
 
 .move-icon {
   width: 15px;
+  margin-right: .5em;
+  padding: 5px;
+  box-sizing: content-box;
 }
 
 .all-shapes {

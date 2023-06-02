@@ -151,7 +151,7 @@ export default function MovesList() {
           <img
             className="move-icon"
             src={typeIcon}
-            style={{ backgroundColor }}
+            style={{ backgroundColor: backgroundColor }}
             alt={move.type.name}
           />
           <div className="move-name">{move.name}</div>
