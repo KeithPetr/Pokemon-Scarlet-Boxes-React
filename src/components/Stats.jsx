@@ -28,6 +28,7 @@ import Square from "../ShapeIcons/square.png";
 import Star from "../ShapeIcons/star.png";
 import Triangle from "../ShapeIcons/triangle.png";
 import PokemonContext from "../PokemonContext";
+import MovesList from "./MovesList";
 
 export default function Stats() {
   const { selectedPokemon } = useContext(PokemonContext);
@@ -219,24 +220,7 @@ export default function Stats() {
         <div className="held-item-title">Held Item</div>
         <div className="held-item-name"> -- </div>
       </div>
-      <div className="move-list">
-        <div className="move">
-          <img className="move-icon" src={fire} />
-          <div className="move-name">{selectedPokemon.moves[0].move.name}</div>
-        </div>
-        <div className="move">
-          <img className="move-icon" src={fire} />
-          <div className="move-name">{selectedPokemon.moves[1].move.name}</div>
-        </div>
-        <div className="move">
-          <img className="move-icon" src={fire} />
-          <div className="move-name">{selectedPokemon.moves[2].move.name}</div>
-        </div>
-        <div className="move">
-          <img className="move-icon" src={fire} />
-          <div className="move-name">{selectedPokemon.moves[3].move.name}</div>
-        </div>
-      </div>
+      <MovesList />
       <div className="all-shapes">
         <img className="shape" src={Circle} />
         <img className="shape" src={Triangle} />
