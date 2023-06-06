@@ -57,10 +57,6 @@ export default function MovesList() {
     moveData();
   }, [selectedPokemon]);
 
-  useEffect(() => {
-    console.log(moveArray);
-  }, [moveArray]);
-
   function renderTypes(move) {
     let backgroundColor = "";
     let typeIcon = "";
