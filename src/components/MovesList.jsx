@@ -113,7 +113,7 @@ export default function MovesList() {
         typeIcon = ice;
         break;
       case "normal":
-        backgroundColor = "seashell";
+        backgroundColor = "#ccccb3";
         typeIcon = normal;
         break;
       case "poison":
