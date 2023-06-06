@@ -21,11 +21,13 @@ body {
 
 .app-layout {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  min-width: 1200px;
 }
 
 .app-row {
   display: flex;
+  height: 100%
 }
 
 .pokemon-side {
@@ -198,20 +200,20 @@ body {
 .search-inputs {
   display: flex;
   width: 70%;
-  margin: 2em auto 1em;
+  margin: .72em auto 1em;
   justify-content: space-between;
   color: white;
 }
 
 .all-boxes, .search {
   padding: .25em 0;
+  font-size: 1.2rem;
 }
 
 .all-boxes {
   display: flex;
   background-color: var(--bg-four);
   width: 40%;
-  font-size: 1.5rem;
   align-items: center;
 }
 
@@ -222,7 +224,7 @@ body {
 }
 
 .boxes-icon > img {
-  width: 30px;
+  width: 20px;
   align-self: center;
 }
 
@@ -234,7 +236,6 @@ body {
   display: flex;
   background-color: var(--bg-four);
   width: 40%;
-  font-size: 1.5rem;
 }
 
 .magnifying-glass {
@@ -244,7 +245,7 @@ body {
 }
 
 .magnifying-glass > img {
-  width: 30px;
+  width: 20px;
   align-self: center;
 }
 
@@ -352,7 +353,7 @@ body {
   flex-direction: column;
   font-size: 1.25rem;
   justify-content: center;
-  height: 40%;
+  height: 35%;
 }
 
 .hp,
@@ -398,7 +399,7 @@ body {
 
 .move-list {
   background-color: rgba(0, 0, 0, 0.3);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: .25em 0 .25em .5em;
 }
 

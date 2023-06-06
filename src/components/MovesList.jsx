@@ -22,7 +22,16 @@ import water from "../PokemonIcons/water.svg";
 
 export default function MovesList() {
   const { selectedPokemon } = useContext(PokemonContext);
-  const moves = selectedPokemon.moves.slice(0, 4);
+  let moves = [];
+  const availableMoves = [...selectedPokemon.moves];
+
+  for (let i = 0; i < 4; i++) {
+    if (availableMoves.length > 0) {
+      const randNum = Math.floor(Math.random() * availableMoves.length);
+      const selectedMove = availableMoves.splice(randNum, 1)[0];
+      moves.push(selectedMove);
+    }
+  }
   const [moveArray, setMoveArray] = useState([]);
 
   useEffect(() => {
@@ -45,10 +54,7 @@ export default function MovesList() {
         console.log("Error occurred during fetch request:", error);
       }
     }
-
-    if (moves.length > 0) {
-      moveData();
-    }
+    moveData();
   }, [selectedPokemon]);
 
   useEffect(() => {
