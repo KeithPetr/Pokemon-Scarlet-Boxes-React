@@ -107,6 +107,8 @@ body {
   background-color: var(--bg-four);
   border-radius: 5px;
   width: 100%;
+  border: 1px solid red;
+  height: 75px;
 }
 
 .poke-level {
