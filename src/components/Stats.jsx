@@ -86,7 +86,7 @@ export default function Stats() {
       backgroundColor = "lightblue";
       typeIcon = ice;
     } else if (type === "normal") {
-      backgroundColor = "seashell";
+      backgroundColor = "#ccccb3";
       typeIcon = normal;
     } else if (type === "poison") {
       backgroundColor = "plum";
