@@ -1,20 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useState, useContext } from "react";
 import PartyItem from "./PartyItem";
+import PokemonContext from "../PokemonContext";
 
 export default function Party() {
-  const [partyPokemon, setPartyPokemon] = useState([]);
-
-  const handleDrop = (event) => {
-    event.preventDefault();
-
-    // Get the Pokémon data from the dropped data
-    const droppedPokemon = JSON.parse(event.dataTransfer.getData("text/plain"));
-
-    // Add the dropped Pokémon to the party
-    if (partyPokemon.length < 6) {
-      setPartyPokemon([...partyPokemon, droppedPokemon]);
-    }
-  };
+  const {partyPokemon, handleDrop, handleBoxItemClick} = useContext(PokemonContext)
 
   const handleDragOver = (event) => {
     event.preventDefault();
@@ -26,7 +15,7 @@ export default function Party() {
     return (
       <>
         {partyPokemon.map((pokemon) => (
-          <PartyItem key={pokemon.id} pokemon={pokemon} />
+          <PartyItem key={pokemon.id} pokemon={pokemon} handleBoxItemClick={handleBoxItemClick}/>
         ))}
         {blankPartyItems.map((index) => (
           <PartyItem key={index} pokemon={null} />

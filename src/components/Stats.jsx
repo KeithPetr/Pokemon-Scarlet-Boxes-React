@@ -31,7 +31,7 @@ import PokemonContext from "../PokemonContext";
 import MovesList from "./MovesList";
 
 export default function Stats() {
-  const { selectedPokemon } = useContext(PokemonContext);
+  const { selectedPokemon, droppedPokemon } = useContext(PokemonContext);
   console.log(selectedPokemon);
 
   if (!selectedPokemon) {
