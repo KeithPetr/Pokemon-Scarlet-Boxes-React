@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import Boxes from "./components/Boxes";
 import SearchInputs from "./components/SearchInputs";
 import Header from "./components/Header";

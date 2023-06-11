@@ -22,7 +22,9 @@ body {
 .app-layout {
   display: flex;
   flex-direction: column;
-  min-width: 1200px;
+  min-width: 1500px;
+  width: 100%;
+  height: 100%;
 }
 
 .app-row {
@@ -33,6 +35,7 @@ body {
 .pokemon-side {
   display: flex;
   flex-direction: column;
+  height: 92.15vh;
   width: 100%;
 }
 
@@ -82,6 +85,9 @@ body {
   margin: 2em 0 0 1em;
   width: 20%;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .party-header {
@@ -107,7 +113,7 @@ body {
   background-color: var(--bg-four);
   border-radius: 5px;
   width: 100%;
-  height: 75px;
+  height: 100px;
 }
 
 .poke-level {
@@ -118,8 +124,8 @@ body {
 }
 
 .party-poke-image {
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
   padding: 1em 0.5em 0;
@@ -129,6 +135,7 @@ body {
 
 .boxes {
   margin: 0 auto;
+  font-size: 1.5rem;
 }
 
 .boxes-header {
@@ -141,13 +148,13 @@ body {
   border: 2px solid black;
   padding: 0.5em 1em;
   background-color: lightgray;
-  font-size: 1.25rem;
 }
 
 .box-grid {
   display: grid;
-  grid-template-columns: repeat(6, 80px);
-  grid-template-rows: repeat(5, 80px);
+  grid-template-columns: repeat(6, 100px);
+  grid-template-rows: repeat(5, 100px);
+  gap: 0.5em;
   justify-content: center;
 }
 
@@ -170,7 +177,6 @@ body {
 }
 
 .box-number {
-  font-size: 1.25rem;
   display: flex;
   margin: auto;
   align-items: center;
@@ -185,15 +191,15 @@ body {
 
 .box-item {
   background-color: var(--bg-four);
-  width: 75px;
-  height: 75px;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   padding: 1em 0.5em 0;
 }
 
 .box-item-image {
-  width: 70%;
+  width: 100%;
 }
 
 /* ----------------------------- SEARCH INPUTS --------------------------------- */
@@ -201,14 +207,14 @@ body {
 .search-inputs {
   display: flex;
   width: 70%;
-  margin: .72em auto 1em;
+  margin: 4em auto 0;
   justify-content: space-between;
   color: white;
 }
 
 .all-boxes, .search {
   padding: .25em 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .all-boxes {
@@ -258,6 +264,7 @@ body {
 
 .stats-side {
   width: 50%;
+  font-size: 1.75rem;
 }
 
 .stats {
@@ -301,7 +308,6 @@ body {
 .poke-number {
   display: flex;
   align-items: center;
-  font-size: 1.25rem;
   height: 8%;
 }
 
@@ -334,7 +340,6 @@ body {
   padding: 0.25em 1em;
   border-radius: 15px;
   background-color: red;
-  font-size: 1.25rem;
   text-shadow: -1px 1px 10px black;
   letter-spacing: 1px;
   font-weight: bold;
@@ -352,7 +357,6 @@ body {
 .base-stats {
   display: flex;
   flex-direction: column;
-  font-size: 1.25rem;
   justify-content: center;
   height: 35%;
 }
@@ -385,7 +389,6 @@ body {
   display: flex;
   background-color: rgba(0, 0, 0, 0.3);
   padding: .25em 0;
-  font-size: 1.25rem;
 }
 
 .ability-title, .held-item-title {
@@ -400,7 +403,6 @@ body {
 
 .move-list {
   background-color: rgba(0, 0, 0, 0.3);
-  font-size: 1.2rem;
   padding: .25em 0 .25em .5em;
 }
 
@@ -426,7 +428,7 @@ body {
 }
 
 .shape {
-  width: 25px;
+  width: 45px;
 }
 
 /* -------------------------------- FOOTER --------------------------------------- */
@@ -436,6 +438,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
+  font-size: 1.25rem;
 }
 
 .footer-options {
