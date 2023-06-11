@@ -7,6 +7,28 @@ export default PokemonContext;
 export function PokemonProvider({ children }) {
   const [pokemonData, setPokemonData] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState(null);
+  const [partyPokemon, setPartyPokemon] = useState([]);
+  const [droppedPokemon, setDroppedPokemon] = useState(null);
+
+  const handleDrop = (event) => {
+    event.preventDefault();
+
+    // Get the Pokémon data from the dropped data
+    const droppedData = JSON.parse(event.dataTransfer.getData("text/plain"));
+    setDroppedPokemon(droppedData);
+
+    // Add the dropped Pokémon to the party
+    if (partyPokemon.length < 6) {
+      setPartyPokemon((prevPartyPokemon) => [...prevPartyPokemon, droppedData]);
+    }
+
+    // Set the dropped Pokemon as the selected Pokemon
+    if (partyPokemon.length < 6) {
+      setSelectedPokemon(droppedData);
+    }
+  };
+
+  useEffect(() => console.log(droppedPokemon), [droppedPokemon]);
 
   function handleBoxItemClick(pokemonObj) {
     setSelectedPokemon(pokemonObj);
@@ -43,7 +65,16 @@ export function PokemonProvider({ children }) {
   }, []);
 
   return (
-    <PokemonContext.Provider value={{pokemonData, selectedPokemon, handleBoxItemClick}}>
+    <PokemonContext.Provider
+      value={{
+        pokemonData,
+        selectedPokemon,
+        partyPokemon,
+        droppedPokemon,
+        handleDrop,
+        handleBoxItemClick,
+      }}
+    >
       {children}
     </PokemonContext.Provider>
   );

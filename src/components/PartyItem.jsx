@@ -1,15 +1,25 @@
 import React from "react";
 
-export default function PartyItem() {
-const imgURL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/46.png"
-
+export default function PartyItem({ pokemon, handleBoxItemClick }) {
   return (
-    <div className="party-component">
-      <div className="party-details">
-        <div className="poke-level">Lv. 100</div>
-        <div className="party-poke-name">Dragonite</div>
-      </div>
-      <img className="party-poke-image" src={imgURL}/>
+    <div className="party-item">
+      {pokemon ? (
+        <div className="party-component" onClick={() => handleBoxItemClick(pokemon)}>
+          <div className="party-details">
+            <div className="poke-level">Lv. 100</div>
+            <div className="party-poke-name">{pokemon.species.name}</div>
+          </div>
+          <img
+            className="party-poke-image"
+            src={pokemon.sprites.other["official-artwork"].front_default}
+            alt={pokemon.species.name}
+          />
+        </div>
+      ) : (
+        <div className="party-component">
+          <div className="party-details"></div>
+        </div>
+      )}
     </div>
   );
 }
