@@ -6,7 +6,6 @@ import PokemonContext from "../PokemonContext";
 export default function Boxes() {
   const { pokemonData, handleBoxItemClick, droppedPokemon } = useContext(PokemonContext);
   const [boxPokemon, setBoxPokemon] = useState([]);
-  const [droppedPokemonId, setDroppedPokemonId] = useState(null);
 
   useEffect(() => {
     // Set the initial boxPokemon state when pokemonData is available
@@ -16,12 +15,11 @@ export default function Boxes() {
   useEffect(() => {
     // Update the boxPokemon state when droppedPokemon changes
     if (droppedPokemon) {
-      setDroppedPokemonId(droppedPokemon.id);
       setBoxPokemon((prevBoxPokemon) => {
         const updatedBoxPokemon = prevBoxPokemon.map((pokemon) => {
           if (pokemon.id === droppedPokemon.id) {
             // Create a copy of the Pokémon object without the sprites
-            return { ...pokemon, sprites: null };
+            return { ...pokemon};
           }
           return pokemon;
         });

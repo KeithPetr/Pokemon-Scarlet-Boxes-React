@@ -6,7 +6,10 @@ export default function BoxItem({ image, pokemon, handleBoxItemClick }) {
 
   const handleDragStart = (event) => {
     event.dataTransfer.setData("text/plain", JSON.stringify(pokemon));
+    setBoxPokemon((prevBoxPokemon) => prevBoxPokemon.filter((p) => p.id !== pokemon.id));
   };
+
+  const isPokemonDropped = droppedPokemon.some((p) => p.id === pokemon.id);
 
   return (
     <div
@@ -15,8 +18,8 @@ export default function BoxItem({ image, pokemon, handleBoxItemClick }) {
       draggable="true"
       onDragStart={handleDragStart}
     >
-      {droppedPokemon && pokemon.id === droppedPokemon.id ? (
-        <div className="box-item-placeholder"></div>
+      {isPokemonDropped ? (
+        <div className="box-item-placeholder">Blank</div>
       ) : (
         <img className="box-item-image" src={image} alt="Pokemon" />
       )}
