@@ -394,7 +394,7 @@ body {
 .ability-title, .held-item-title {
   margin: 0 0.5em 0 0.5em;
   border-right: 1px solid grey;
-  width: 100px;
+  width: 140px;
 }
 
 .held-item{
