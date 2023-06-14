@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import PokemonContext from "../PokemonContext";
 
 export default function BoxItem({ image, pokemon, handleBoxItemClick }) {
+  const { droppedPokemon } = useContext(PokemonContext);
+
   const handleDragStart = (event) => {
-    // Set the data being dragged as the stringified Pokémon data
     event.dataTransfer.setData("text/plain", JSON.stringify(pokemon));
+    setBoxPokemon((prevBoxPokemon) => prevBoxPokemon.filter((p) => p.id !== pokemon.id));
   };
+
+  const isPokemonDropped = droppedPokemon.some((p) => p.id === pokemon.id);
 
   return (
     <div
@@ -13,7 +18,11 @@ export default function BoxItem({ image, pokemon, handleBoxItemClick }) {
       draggable="true"
       onDragStart={handleDragStart}
     >
-      <img className="box-item-image" src={image} alt="Pokemon" />
+      {isPokemonDropped ? (
+        <div className="box-item-placeholder">Blank</div>
+      ) : (
+        <img className="box-item-image" src={image} alt="Pokemon" />
+      )}
     </div>
   );
 }
