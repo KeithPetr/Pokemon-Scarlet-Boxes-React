@@ -6,7 +6,9 @@ export default function BoxItem({ image, pokemon, handleBoxItemClick }) {
 
   const handleDragStart = (event) => {
     event.dataTransfer.setData("text/plain", JSON.stringify(pokemon));
-    setBoxPokemon((prevBoxPokemon) => prevBoxPokemon.filter((p) => p.id !== pokemon.id));
+    // setBoxPokemon((prevBoxPokemon) =>
+    //   prevBoxPokemon.filter((p) => p.id !== pokemon.id)
+    // );
   };
 
   const isPokemonDropped = droppedPokemon.some((p) => p.id === pokemon.id);
