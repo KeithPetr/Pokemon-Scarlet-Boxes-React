@@ -22,20 +22,18 @@ body {
 .app-layout {
   display: flex;
   flex-direction: column;
-  min-width: 1500px;
-  width: 100%;
-  height: 100%;
+  min-width: 1400px;
 }
 
 .app-row {
   display: flex;
-  height: 100%
+  height: 100%;
 }
 
 .pokemon-side {
   display: flex;
   flex-direction: column;
-  height: 92.15vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -87,7 +85,7 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .party-header {
@@ -117,15 +115,14 @@ body {
 }
 
 .poke-level {
-  
   border-radius: 15px;
   padding: 0.25em 0.5em;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .party-poke-image {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   display: flex;
   justify-content: center;
   padding: 1em 0.5em 0;
@@ -141,10 +138,11 @@ body {
 .boxes-header {
   display: flex;
   justify-content: center;
-  margin-bottom: 1em;  
+  margin-bottom: 1em;
 }
 
-.left-trigger, .right-trigger {
+.left-trigger,
+.right-trigger {
   border: 2px solid black;
   padding: 0.5em 1em;
   background-color: lightgray;
@@ -163,7 +161,7 @@ body {
   background-color: var(--bg-four);
   width: 40%;
   margin: 0 1em;
-  padding: .5em 0;
+  padding: 0.5em 0;
 }
 
 .cube-icon {
@@ -207,13 +205,14 @@ body {
 .search-inputs {
   display: flex;
   width: 70%;
-  margin: 4em auto 0;
+  margin: 2em auto 1em;
   justify-content: space-between;
   color: white;
 }
 
-.all-boxes, .search {
-  padding: .25em 0;
+.all-boxes,
+.search {
+  padding: 0.25em 0;
   font-size: 1.5rem;
 }
 
@@ -227,7 +226,7 @@ body {
 .boxes-icon {
   display: flex;
   border-right: 2px solid grey;
-  padding: .25em 1em;
+  padding: 0.25em 1em;
 }
 
 .boxes-icon > img {
@@ -248,7 +247,7 @@ body {
 .magnifying-glass {
   display: flex;
   border-right: 2px solid grey;
-  padding: .25em 1em;
+  padding: 0.25em 1em;
 }
 
 .magnifying-glass > img {
@@ -264,7 +263,7 @@ body {
 
 .stats-side {
   width: 50%;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .stats {
@@ -288,7 +287,7 @@ body {
 .ultra-ball {
   width: 30px;
   height: 30px;
-  margin: auto 0.5em auto 1.5em;
+  margin: auto 0.5em auto 0.5em;
 }
 
 .ball-h2 {
@@ -313,7 +312,7 @@ body {
 
 .poke-number h3 {
   margin: 0;
-  padding: .5em 0;
+  padding: 0.5em 0;
 }
 
 .index-number {
@@ -336,7 +335,7 @@ body {
 
 .type {
   display: flex;
-  width: 35%;
+  width: 45%;
   padding: 0.25em 1em;
   border-radius: 15px;
   background-color: red;
@@ -385,35 +384,37 @@ body {
   justify-content: center;
 }
 
-.ability, .held-item {
+.ability,
+.held-item {
   display: flex;
   background-color: rgba(0, 0, 0, 0.3);
-  padding: .25em 0;
+  padding: 0.25em 0;
 }
 
-.ability-title, .held-item-title {
+.ability-title,
+.held-item-title {
   margin: 0 0.5em 0 0.5em;
   border-right: 1px solid grey;
   width: 140px;
 }
 
-.held-item{
+.held-item {
   background-color: transparent;
 }
 
 .move-list {
   background-color: rgba(0, 0, 0, 0.3);
-  padding: .25em 0 .25em .5em;
+  padding: 0.25em 0 0.25em 0.5em;
 }
 
 .move {
   display: flex;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .move-icon {
   width: 15px;
-  margin-right: .5em;
+  margin-right: 0.5em;
   padding: 5px;
   box-sizing: content-box;
 }
@@ -455,10 +456,16 @@ body {
 .footer-options p {
   background-color: white;
   border-radius: 50%;
-  padding: .25em;
-  margin-right: .5em;
+  padding: 0.25em;
+  margin-right: 0.5em;
 }
 
 .footer-options div div {
   color: white;
+}
+
+/* --------------------------------- MEDIA QUERIES ----------------------------------- */
+
+@media (max-width: 1500px) {
+ 
 }

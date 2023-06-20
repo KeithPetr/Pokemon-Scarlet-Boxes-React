@@ -36,9 +36,7 @@ export default function Stats() {
 
   if (!selectedPokemon) {
     return (
-      <div className="stats">
-        <h1>Blank</h1>
-      </div>
+      <div className="stats">Blank</div>
     );
   }
 

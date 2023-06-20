@@ -21,7 +21,7 @@ export default function BoxItem({ image, pokemon, handleBoxItemClick }) {
       onDragStart={handleDragStart}
     >
       {isPokemonDropped ? (
-        <div className="box-item-placeholder">Blank</div>
+        <div className="box-item-placeholder"></div>
       ) : (
         <img className="box-item-image" src={image} alt="Pokemon" />
       )}
